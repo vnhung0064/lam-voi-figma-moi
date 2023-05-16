@@ -8,10 +8,13 @@
 import Foundation
 import UIKit
 
+struct popularTrackInMonth:Codable{
+    let results: [Song]
+}
 
-struct Song:Decodable {
-    let id: Int
-    let name: String
-    let artist_name: String
-    let album_image: String
+struct Song:Codable {
+    var id: String
+    var name: String
+    var artist_name: String
+    var album_image: String
 }

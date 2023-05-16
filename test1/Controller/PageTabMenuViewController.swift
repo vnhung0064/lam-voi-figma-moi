@@ -11,12 +11,12 @@ import SwiftPageMenu
 
 class PageTabMenuViewController: PageMenuController {
 
-    let items: [[String]]
+    
 
     let titles: [String]
 
-    init(items: [[String]], titles: [String], options: PageMenuOptions? = nil) {
-        self.items = items
+    init( titles: [String], options: PageMenuOptions? = nil) {
+        
         self.titles = titles
         super.init(options: options)
     }
@@ -27,13 +27,25 @@ class PageTabMenuViewController: PageMenuController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
 
+        
+        
         self.edgesForExtendedLayout = []
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1) // your colour here
+
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+
 
         if options.layout == .layoutGuide && options.tabMenuPosition == .bottom {
             self.view.backgroundColor = .red
         } else {
-            self.view.backgroundColor = .white
+            self.view.backgroundColor = UIColor(red: 0.506, green: 0.384, blue: 0.976, alpha: 1)
         }
 
         if self.options.tabMenuPosition == .custom {
@@ -72,20 +84,20 @@ extension PageTabMenuViewController: PageMenuControllerDataSource {
 extension PageTabMenuViewController: PageMenuControllerDelegate {
     func pageMenuController(_ pageMenuController: PageMenuController, didScrollToPageAtIndex index: Int, direction: PageMenuNavigationDirection) {
         // The page view controller will begin scrolling to a new page.
-        print("didScrollToPageAtIndex index:\(index)")
+//        print("didScrollToPageAtIndex index:\(index)")
     }
 
     func pageMenuController(_ pageMenuController: PageMenuController, willScrollToPageAtIndex index: Int, direction: PageMenuNavigationDirection) {
         // The page view controller scroll progress between pages.
-        print("willScrollToPageAtIndex index:\(index)")
+//        print("willScrollToPageAtIndex index:\(index)")
     }
 
     func pageMenuController(_ pageMenuController: PageMenuController, scrollingProgress progress: CGFloat, direction: PageMenuNavigationDirection) {
         // The page view controller did complete scroll to a new page.
-        print("scrollingProgress progress: \(progress)")
+//        print("scrollingProgress progress: \(progress)")
     }
 
     func pageMenuController(_ pageMenuController: PageMenuController, didSelectMenuItem index: Int, direction: PageMenuNavigationDirection) {
-        print("didSelectMenuItem index: \(index)")
+//        print("didSelectMenuItem index: \(index)")
     }
 }

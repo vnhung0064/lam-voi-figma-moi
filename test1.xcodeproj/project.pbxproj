@@ -11,22 +11,29 @@
 		CB20EB702A038FED001936C7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB20EB6E2A038FED001936C7 /* TableViewCell.swift */; };
 		CB20EB712A038FED001936C7 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB20EB6F2A038FED001936C7 /* TableViewCell.xib */; };
 		CB91D7A82A09F4AE0088225E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91D7A72A09F4AE0088225E /* APICaller.swift */; };
-		CB91D7AB2A0A2A640088225E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CB91D7AA2A0A2A640088225E /* Alamofire */; };
 		CB91D7AE2A0A49A00088225E /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91D7AC2A0A49A00088225E /* SettingTableViewCell.swift */; };
 		CB91D7AF2A0A49A00088225E /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB91D7AD2A0A49A00088225E /* SettingTableViewCell.xib */; };
 		CB91D7B12A0A49C90088225E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91D7B02A0A49C90088225E /* SettingViewController.swift */; };
+		CB9384AF2A121D3A0079B7FA /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9384AE2A121D3A0079B7FA /* Playlist.swift */; };
+		CB9384B12A124F590079B7FA /* AddtoPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9384B02A124F590079B7FA /* AddtoPlaylistViewController.swift */; };
 		CB98D61D29DD82DE0051CE98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98D61C29DD82DE0051CE98 /* AppDelegate.swift */; };
 		CB98D61F29DD82DE0051CE98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98D61E29DD82DE0051CE98 /* SceneDelegate.swift */; };
 		CB98D62129DD82DE0051CE98 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98D62029DD82DE0051CE98 /* HomeViewController.swift */; };
 		CB98D62429DD82DE0051CE98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB98D62229DD82DE0051CE98 /* Main.storyboard */; };
 		CB98D62629DD82E00051CE98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB98D62529DD82E00051CE98 /* Assets.xcassets */; };
 		CB98D62929DD82E00051CE98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB98D62729DD82E00051CE98 /* LaunchScreen.storyboard */; };
+		CB9DD2632A0DE9420014D27C /* PlayListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD2612A0DE9420014D27C /* PlayListTableViewCell.swift */; };
+		CB9DD2642A0DE9420014D27C /* PlayListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9DD2622A0DE9420014D27C /* PlayListTableViewCell.xib */; };
+		CB9DD2672A0DF9330014D27C /* TopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DD2652A0DF9330014D27C /* TopTableView.swift */; };
+		CB9DD2682A0DF9330014D27C /* TopTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB9DD2662A0DF9330014D27C /* TopTableView.xib */; };
 		CBB548F929FB80B1006A958E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB548F829FB80B1006A958E /* SearchViewController.swift */; };
 		CBB548FB29FB8119006A958E /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB548FA29FB8119006A958E /* PlaylistViewController.swift */; };
 		CBC198682A01E6D700C12954 /* SwiftPageMenu in Frameworks */ = {isa = PBXBuildFile; productRef = CBC198672A01E6D700C12954 /* SwiftPageMenu */; };
 		CBC478182A08FF52009C050D /* PageTabMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC478172A08FF52009C050D /* PageTabMenuViewController.swift */; };
 		CBC4781A2A0901B3009C050D /* RoundRectPagerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC478192A0901B3009C050D /* RoundRectPagerOptions.swift */; };
 		CBC4781C2A0907F4009C050D /* TrungGianController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC4781B2A0907F4009C050D /* TrungGianController.swift */; };
+		CBFD85CB2A0B97B200FB459F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CBFD85CA2A0B97B200FB459F /* SDWebImage */; };
+		CBFD85CD2A0B97B200FB459F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBFD85CC2A0B97B200FB459F /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,8 @@
 		CB91D7AC2A0A49A00088225E /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		CB91D7AD2A0A49A00088225E /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		CB91D7B02A0A49C90088225E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		CB9384AE2A121D3A0079B7FA /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		CB9384B02A124F590079B7FA /* AddtoPlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtoPlaylistViewController.swift; sourceTree = "<group>"; };
 		CB98D61929DD82DE0051CE98 /* test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB98D61C29DD82DE0051CE98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB98D61E29DD82DE0051CE98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +54,10 @@
 		CB98D62529DD82E00051CE98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB98D62829DD82E00051CE98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB98D62A29DD82E00051CE98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB9DD2612A0DE9420014D27C /* PlayListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListTableViewCell.swift; sourceTree = "<group>"; };
+		CB9DD2622A0DE9420014D27C /* PlayListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayListTableViewCell.xib; sourceTree = "<group>"; };
+		CB9DD2652A0DF9330014D27C /* TopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableView.swift; sourceTree = "<group>"; };
+		CB9DD2662A0DF9330014D27C /* TopTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopTableView.xib; sourceTree = "<group>"; };
 		CBB548F829FB80B1006A958E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CBB548FA29FB8119006A958E /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		CBC478172A08FF52009C050D /* PageTabMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTabMenuViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBFD85CB2A0B97B200FB459F /* SDWebImage in Frameworks */,
+				CBFD85CD2A0B97B200FB459F /* SDWebImageMapKit in Frameworks */,
 				CBC198682A01E6D700C12954 /* SwiftPageMenu in Frameworks */,
-				CB91D7AB2A0A2A640088225E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +89,7 @@
 				CBC478192A0901B3009C050D /* RoundRectPagerOptions.swift */,
 				CBC4781B2A0907F4009C050D /* TrungGianController.swift */,
 				CB91D7B02A0A49C90088225E /* SettingViewController.swift */,
+				CB9384B02A124F590079B7FA /* AddtoPlaylistViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -83,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				CB20EB6B2A038F9F001936C7 /* Song.swift */,
+				CB9384AE2A121D3A0079B7FA /* Playlist.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -90,6 +106,7 @@
 		CB20EB6D2A038FB2001936C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB9384AD2A11E32F0079B7FA /* PlayListView */,
 				CB20EB6E2A038FED001936C7 /* TableViewCell.swift */,
 				CB20EB6F2A038FED001936C7 /* TableViewCell.xib */,
 				CB91D7AC2A0A49A00088225E /* SettingTableViewCell.swift */,
@@ -104,6 +121,17 @@
 				CB91D7A72A09F4AE0088225E /* APICaller.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		CB9384AD2A11E32F0079B7FA /* PlayListView */ = {
+			isa = PBXGroup;
+			children = (
+				CB9DD2612A0DE9420014D27C /* PlayListTableViewCell.swift */,
+				CB9DD2622A0DE9420014D27C /* PlayListTableViewCell.xib */,
+				CB9DD2652A0DF9330014D27C /* TopTableView.swift */,
+				CB9DD2662A0DF9330014D27C /* TopTableView.xib */,
+			);
+			path = PlayListView;
 			sourceTree = "<group>";
 		};
 		CB98D61029DD82DE0051CE98 = {
@@ -132,8 +160,8 @@
 				CB20EB6D2A038FB2001936C7 /* View */,
 				CB20EB692A0367F5001936C7 /* Controller */,
 				CB98D62229DD82DE0051CE98 /* Main.storyboard */,
-				CB98D62529DD82E00051CE98 /* Assets.xcassets */,
 				CB98D62729DD82E00051CE98 /* LaunchScreen.storyboard */,
+				CB98D62529DD82E00051CE98 /* Assets.xcassets */,
 				CB98D62A29DD82E00051CE98 /* Info.plist */,
 			);
 			path = test1;
@@ -157,7 +185,8 @@
 			name = test1;
 			packageProductDependencies = (
 				CBC198672A01E6D700C12954 /* SwiftPageMenu */,
-				CB91D7AA2A0A2A640088225E /* Alamofire */,
+				CBFD85CA2A0B97B200FB459F /* SDWebImage */,
+				CBFD85CC2A0B97B200FB459F /* SDWebImageMapKit */,
 			);
 			productName = test1;
 			productReference = CB98D61929DD82DE0051CE98 /* test1.app */;
@@ -189,7 +218,7 @@
 			mainGroup = CB98D61029DD82DE0051CE98;
 			packageReferences = (
 				CBC198662A01E6D700C12954 /* XCRemoteSwiftPackageReference "SwiftPageMenu" */,
-				CB91D7A92A0A2A640088225E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CBFD85C92A0B97B200FB459F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = CB98D61A29DD82DE0051CE98 /* Products */;
 			projectDirPath = "";
@@ -205,7 +234,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9DD2682A0DF9330014D27C /* TopTableView.xib in Resources */,
 				CB98D62929DD82E00051CE98 /* LaunchScreen.storyboard in Resources */,
+				CB9DD2642A0DE9420014D27C /* PlayListTableViewCell.xib in Resources */,
 				CB20EB712A038FED001936C7 /* TableViewCell.xib in Resources */,
 				CB98D62629DD82E00051CE98 /* Assets.xcassets in Resources */,
 				CB91D7AF2A0A49A00088225E /* SettingTableViewCell.xib in Resources */,
@@ -225,11 +256,15 @@
 				CBC478182A08FF52009C050D /* PageTabMenuViewController.swift in Sources */,
 				CB91D7B12A0A49C90088225E /* SettingViewController.swift in Sources */,
 				CB98D61D29DD82DE0051CE98 /* AppDelegate.swift in Sources */,
+				CB9DD2632A0DE9420014D27C /* PlayListTableViewCell.swift in Sources */,
+				CB9DD2672A0DF9330014D27C /* TopTableView.swift in Sources */,
 				CBB548F929FB80B1006A958E /* SearchViewController.swift in Sources */,
 				CB20EB6C2A038FA0001936C7 /* Song.swift in Sources */,
 				CB91D7AE2A0A49A00088225E /* SettingTableViewCell.swift in Sources */,
 				CB20EB702A038FED001936C7 /* TableViewCell.swift in Sources */,
+				CB9384AF2A121D3A0079B7FA /* Playlist.swift in Sources */,
 				CBC4781C2A0907F4009C050D /* TrungGianController.swift in Sources */,
+				CB9384B12A124F590079B7FA /* AddtoPlaylistViewController.swift in Sources */,
 				CB91D7A82A09F4AE0088225E /* APICaller.swift in Sources */,
 				CB98D61F29DD82DE0051CE98 /* SceneDelegate.swift in Sources */,
 				CBC4781A2A0901B3009C050D /* RoundRectPagerOptions.swift in Sources */,
@@ -450,14 +485,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CB91D7A92A0A2A640088225E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		CBC198662A01E6D700C12954 /* XCRemoteSwiftPackageReference "SwiftPageMenu" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tamanyan/SwiftPageMenu.git";
@@ -466,18 +493,31 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		CBFD85C92A0B97B200FB459F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CB91D7AA2A0A2A640088225E /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CB91D7A92A0A2A640088225E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		CBC198672A01E6D700C12954 /* SwiftPageMenu */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CBC198662A01E6D700C12954 /* XCRemoteSwiftPackageReference "SwiftPageMenu" */;
 			productName = SwiftPageMenu;
+		};
+		CBFD85CA2A0B97B200FB459F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBFD85C92A0B97B200FB459F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		CBFD85CC2A0B97B200FB459F /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBFD85C92A0B97B200FB459F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

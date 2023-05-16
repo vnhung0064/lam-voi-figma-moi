@@ -29,7 +29,7 @@ struct RoundRectPagerOption: PageMenuOptions {
     }
 
     var menuCursor: PageMenuCursor {
-        return .roundRect(rectColor: .white, cornerRadius: 10, height: 22, borderWidth: nil, borderColor: nil)
+        return .roundRect(rectColor: .white, cornerRadius: 16, height: 32, borderWidth: nil, borderColor: nil)
     }
 
     var font: UIFont {
@@ -41,7 +41,7 @@ struct RoundRectPagerOption: PageMenuOptions {
     }
 
     var tabMenuBackgroundColor: UIColor {
-        return .white
+        return UIColor(red: 0.506, green: 0.384, blue: 0.976, alpha: 1)
     }
 
     var tabMenuContentInset: UIEdgeInsets {
