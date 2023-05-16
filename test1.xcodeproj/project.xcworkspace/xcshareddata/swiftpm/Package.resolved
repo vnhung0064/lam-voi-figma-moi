@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "3289629ef6cbf1ad8c3d1dccf0cf09ac97547cd6",
+        "version" : "5.15.7"
+      }
+    },
+    {
+      "identity" : "swiftpagemenu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tamanyan/SwiftPageMenu.git",
+      "state" : {
+        "revision" : "3556871a96c87c075e53cf63b8c4fad598d3a806",
+        "version" : "1.5.0"
+      }
+    }
+  ],
+  "version" : 2
+}
