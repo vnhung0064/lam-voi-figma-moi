@@ -73,7 +73,12 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("tapped")
+        let song = song[indexPath.row]
+        
+        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song), animated: true)
+       
+         
+        
     }
     
 }

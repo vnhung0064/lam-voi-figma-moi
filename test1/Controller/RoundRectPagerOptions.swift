@@ -41,7 +41,7 @@ struct RoundRectPagerOption: PageMenuOptions {
     }
 
     var tabMenuBackgroundColor: UIColor {
-        return UIColor(red: 0.506, green: 0.384, blue: 0.976, alpha: 1)
+        return UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1)
     }
 
     var tabMenuContentInset: UIEdgeInsets {

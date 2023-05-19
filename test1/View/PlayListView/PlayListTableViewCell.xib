@@ -33,7 +33,7 @@
                         <rect key="frame" x="323" y="37" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" image="Vector"/>
+                        <buttonConfiguration key="configuration" style="gray" image="Vector 2"/>
                         <connections>
                             <action selector="removeButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kon-Ge-X9W"/>
                         </connections>
@@ -58,6 +58,6 @@
     </objects>
     <resources>
         <image name="Add Icon 1" width="60" height="60"/>
-        <image name="Vector" width="18" height="18"/>
+        <image name="Vector 2" width="14" height="13"/>
     </resources>
 </document>

@@ -20,6 +20,11 @@ class SettingViewController: UIViewController {
         SettingTable.delegate = self
         view.backgroundColor = UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1)
         SettingTable.backgroundColor = UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1)
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [
+                            NSAttributedString.Key.foregroundColor: UIColor.white,
+                            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)
+                        ]
 
         
     }

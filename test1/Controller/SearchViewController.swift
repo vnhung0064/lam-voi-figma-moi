@@ -33,6 +33,7 @@ class SearchViewController: UIViewController {
         searchBar.barTintColor = UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1)
         
         searchBar.delegate = self
+        searchBar.tintColor = .black
         
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
@@ -42,7 +43,6 @@ class SearchViewController: UIViewController {
                             NSAttributedString.Key.foregroundColor: UIColor.white,
                             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)
                         ]
-        
 
     }
 
@@ -66,6 +66,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 92
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let song = searchResults[indexPath.row]
+        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song), animated: true)
+
+    }
     func search(query: String) {
            APICaller.shared.search(query: query) { [weak self] result in
                switch result {
@@ -81,12 +86,19 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
        }
 }
 extension SearchViewController: UISearchBarDelegate {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = true
+        return true
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        searchBar.showsCancelButton = false
+    }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let query = searchBar.text {
             search(query: query)
         }
         
-        searchBar.resignFirstResponder()
         discoverTable.isHidden = false
         isSearchResultsVisible = true
         image.isHidden = true
