@@ -87,11 +87,11 @@
 				CB98D62029DD82DE0051CE98 /* HomeViewController.swift */,
 				CBB548F829FB80B1006A958E /* SearchViewController.swift */,
 				CBB548FA29FB8119006A958E /* PlaylistViewController.swift */,
+				CB9384B02A124F590079B7FA /* AddtoPlaylistViewController.swift */,
 				CBC478172A08FF52009C050D /* PageTabMenuViewController.swift */,
 				CBC478192A0901B3009C050D /* RoundRectPagerOptions.swift */,
-				CBC4781B2A0907F4009C050D /* TrungGianController.swift */,
 				CB91D7B02A0A49C90088225E /* SettingViewController.swift */,
-				CB9384B02A124F590079B7FA /* AddtoPlaylistViewController.swift */,
+				CBC4781B2A0907F4009C050D /* TrungGianController.swift */,
 				CBA912F42A14774D00187B8B /* TrackViewController.swift */,
 			);
 			path = Controller;

@@ -68,7 +68,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let song = searchResults[indexPath.row]
-        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song), animated: true)
+        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song,song1: self.searchResults), animated: true)
 
     }
     func search(query: String) {

@@ -75,11 +75,11 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
         let song = song[indexPath.row]
         
-        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song), animated: true)
+        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song,song1: self.song), animated: true)
        
-         
-        
     }
     
+    
 }
+
 
