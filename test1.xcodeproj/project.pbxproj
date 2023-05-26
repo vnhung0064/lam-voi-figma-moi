@@ -15,7 +15,6 @@
 		CB91D7AF2A0A49A00088225E /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB91D7AD2A0A49A00088225E /* SettingTableViewCell.xib */; };
 		CB91D7B12A0A49C90088225E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91D7B02A0A49C90088225E /* SettingViewController.swift */; };
 		CB9384AF2A121D3A0079B7FA /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9384AE2A121D3A0079B7FA /* Playlist.swift */; };
-		CB9384B12A124F590079B7FA /* AddtoPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9384B02A124F590079B7FA /* AddtoPlaylistViewController.swift */; };
 		CB98D61D29DD82DE0051CE98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98D61C29DD82DE0051CE98 /* AppDelegate.swift */; };
 		CB98D61F29DD82DE0051CE98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98D61E29DD82DE0051CE98 /* SceneDelegate.swift */; };
 		CB98D62129DD82DE0051CE98 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB98D62029DD82DE0051CE98 /* HomeViewController.swift */; };
@@ -46,7 +45,6 @@
 		CB91D7AD2A0A49A00088225E /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		CB91D7B02A0A49C90088225E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CB9384AE2A121D3A0079B7FA /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
-		CB9384B02A124F590079B7FA /* AddtoPlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtoPlaylistViewController.swift; sourceTree = "<group>"; };
 		CB98D61929DD82DE0051CE98 /* test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB98D61C29DD82DE0051CE98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB98D61E29DD82DE0051CE98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 				CB98D62029DD82DE0051CE98 /* HomeViewController.swift */,
 				CBB548F829FB80B1006A958E /* SearchViewController.swift */,
 				CBB548FA29FB8119006A958E /* PlaylistViewController.swift */,
-				CB9384B02A124F590079B7FA /* AddtoPlaylistViewController.swift */,
 				CBC478172A08FF52009C050D /* PageTabMenuViewController.swift */,
 				CBC478192A0901B3009C050D /* RoundRectPagerOptions.swift */,
 				CB91D7B02A0A49C90088225E /* SettingViewController.swift */,
@@ -268,7 +265,6 @@
 				CB20EB702A038FED001936C7 /* TableViewCell.swift in Sources */,
 				CB9384AF2A121D3A0079B7FA /* Playlist.swift in Sources */,
 				CBC4781C2A0907F4009C050D /* TrungGianController.swift in Sources */,
-				CB9384B12A124F590079B7FA /* AddtoPlaylistViewController.swift in Sources */,
 				CB91D7A82A09F4AE0088225E /* APICaller.swift in Sources */,
 				CB98D61F29DD82DE0051CE98 /* SceneDelegate.swift in Sources */,
 				CBC4781A2A0901B3009C050D /* RoundRectPagerOptions.swift in Sources */,

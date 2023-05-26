@@ -33,13 +33,12 @@ class TrackViewController: UIViewController {
     
     @IBOutlet weak var currentTime: UILabel!
     
-    @IBOutlet weak var RdButton: UIButton!
     @IBOutlet weak var TotalTime: UILabel!
     @IBOutlet weak var backButton: UIButton!
     
     @IBOutlet weak var PLayButton: UIButton!
     
-    @IBOutlet weak var RepeatButton: UIButton!
+    @IBOutlet weak var RepeateButton: UIButton!
     @IBOutlet weak var NextButton: UIButton!
     
     override func viewDidLoad() {
@@ -63,6 +62,10 @@ class TrackViewController: UIViewController {
         view.backgroundColor = UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1)
         
         startTimer()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "add-circle"), style: .done, target: self, action: nil)
+        
+        navigationItem.title = "Play Song"
     }
     
     static func makeSelf(song:Song, song1: [Song]) -> TrackViewController {
@@ -116,25 +119,30 @@ class TrackViewController: UIViewController {
             let progress = Float(currentTimeSeconds / durationSeconds)
             self.Slider.value = progress
             
-            
+            self.checkSongEnd()
 
         }
     }
     var doituong: Any?
     @IBAction func RepeateTapped(_ sender: Any?) {
         isRepeating = !isRepeating
-            
+        
             if isRepeating {
                 let duration = player?.currentItem?.duration ?? CMTime.zero
                 let time = CMTime(seconds: 0.1, preferredTimescale: 100)
                 let times = [NSValue(time: duration - time), NSValue(time: duration)]
+                RepeateButton.setImage(UIImage(named: "repeateOn"), for: .normal)
                 
                 doituong = player?.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
                     self?.player?.seek(to: .zero)
                     self?.player?.play()
+
                 }
+                
+
             } else {
-                player?.removeTimeObserver(doituong)
+                player?.removeTimeObserver(doituong as Any)
+                RepeateButton.setImage(UIImage(named: "repeateOff"), for: .normal)
             }
         print("tapped")
     }
@@ -169,6 +177,35 @@ class TrackViewController: UIViewController {
         playNextTrack()
         print("tapped")
     }
+    func playPreviousTrack() {
+        if !song1.isEmpty {
+            currentTrackIndex -= 1
+            
+            if currentTrackIndex < 0 {
+                currentTrackIndex = song1.count - 1
+            }
+            
+            let previousSong = song1[currentTrackIndex]
+            
+            // Thực hiện các thay đổi cần thiết để chuyển đến bài hát trước đó, ví dụ: cập nhật UI, thay đổi URL audio, vv.
+            SongNameLb.text = previousSong.name
+            SinggerNameLb.text = previousSong.artist_name
+            
+            if let imageURL = URL(string: previousSong.album_image) {
+                SongImage.sd_setImage(with: imageURL, completed: nil)
+            }
+            
+            let iden = previousSong.id
+            let urlaudio = URL(string: "https://mp3l.jamendo.com/?trackid=\(iden)&format=mp31&from=app-devsite")
+            let playerItem = AVPlayerItem(url: urlaudio!)
+            player?.replaceCurrentItem(with: playerItem)
+            player?.play()
+        }
+    }
+
+    @IBAction func PreviousTapped(_ sender: Any) {
+        playPreviousTrack()
+    }
     
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -193,10 +230,23 @@ class TrackViewController: UIViewController {
         timer?.invalidate()
         timer = nil
     }
+    
+    @objc func checkSongEnd() {
+        guard let player = player else { return }
+        
+        if player.currentItem?.status == .readyToPlay {
+            let currentTime = CMTimeGetSeconds(player.currentTime())
+            let duration = CMTimeGetSeconds(player.currentItem?.duration ?? CMTime.zero)
+            
+            if currentTime >= duration {
+                timer?.invalidate()
+                timer = nil
+                
+                playNextTrack()
+            }
+        }
+    }
+
    
 }
-extension TrackViewController: AVAudioPlayerDelegate{
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        playNextTrack()
-    }
-}
+
