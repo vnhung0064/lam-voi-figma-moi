@@ -12,6 +12,9 @@ class PlaylistViewController: UIViewController {
     var playlists: [Playlist] = []
 
 
+    var playlistSongs: [Song] = []
+
+    
     @IBOutlet weak var PlayListTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()

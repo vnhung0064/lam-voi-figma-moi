@@ -20,6 +20,7 @@ class TrungGianController: UIViewController {
         // Do any additional setup after loading the view.
         let pageViewController = PageTabMenuViewController(
             
+            
             titles: tabTitles,
             options: RoundRectPagerOption())
         

@@ -13,6 +13,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var HomeTable: UITableView!
     
     var song: [Song] = []
+    
+    var playlistSongs: [Song] = []
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,10 +28,14 @@ class HomeViewController: UIViewController {
         fetchData()
     }
     func addToPlaylist(_ song: Song) {
-            // Thêm logic để xử lý việc thêm bài hát vào danh sách phát của bạn tại đây
-            print("Thêm bài hát vào danh sách phát: \(song.name)")
-        }
-        static func makeSelf() -> HomeViewController {
+        
+        playlistSongs.append(song)
+        
+       
+        
+        print("Thêm bài hát vào danh sách phát: \(song.name)")
+}
+    static func makeSelf() -> HomeViewController {
                 let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let rootViewController: HomeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                                         return rootViewController

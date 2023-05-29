@@ -69,7 +69,7 @@ class PageTabMenuViewController: PageMenuController {
 
 extension PageTabMenuViewController: PageMenuControllerDataSource {
     func viewControllers(forPageMenuController pageMenuController: PageMenuController) -> [UIViewController] {
-        return [HomeViewController.makeSelf(),HomeViewController.makeSelf(),UIViewController()]
+        return [HomeViewController.makeSelf(),HomeViewController.makeSelf(),HomeViewController.makeSelf(),HomeViewController.makeSelf(),HomeViewController.makeSelf()]
     }
 
     func menuTitles(forPageMenuController pageMenuController: PageMenuController) -> [String] {

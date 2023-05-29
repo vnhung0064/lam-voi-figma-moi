@@ -46,6 +46,8 @@ extension SettingViewController:UITableViewDelegate, UITableViewDataSource{
         cell.backgroundColor = UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1)
        
         cell.textLabel?.textColor = .white
+        
+        
 
         return cell
     }
