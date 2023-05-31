@@ -41,6 +41,7 @@ class TrackViewController: UIViewController {
     @IBOutlet weak var RepeateButton: UIButton!
     @IBOutlet weak var NextButton: UIButton!
     
+    @IBOutlet weak var addtoPlaylist: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         SongNameLb.text = song?.name
@@ -91,6 +92,8 @@ class TrackViewController: UIViewController {
 
         
     }
+    
+    
     func formatTimeString(_ time: Double) -> String {
         if time.isFinite {
             let minutes = Int(time / 60)

@@ -18,6 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.20784313725490194" green="0.20000000000000001" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
@@ -30,6 +31,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FsM-nr-gku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="370" y="-1277"/>
+        </scene>
+        <!--Tag View Controller-->
+        <scene sceneID="baT-eo-aaK">
+            <objects>
+                <viewController storyboardIdentifier="TagViewController" id="uvg-Eq-UvF" customClass="TagViewController" customModule="test1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XWS-6i-MLB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4H-6O-bTV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1jc-1Q-kJK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1jc-1Q-kJK" secondAttribute="trailing" id="4dq-j0-2Oz"/>
+                                    <constraint firstItem="1jc-1Q-kJK" firstAttribute="leading" secondItem="L4H-6O-bTV" secondAttribute="leading" id="5Ba-ZY-o4g"/>
+                                    <constraint firstItem="1jc-1Q-kJK" firstAttribute="top" secondItem="L4H-6O-bTV" secondAttribute="top" id="AF1-3m-3Ip"/>
+                                    <constraint firstAttribute="bottom" secondItem="1jc-1Q-kJK" secondAttribute="bottom" id="aXn-VK-fxQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CId-Df-dCq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L4H-6O-bTV" firstAttribute="leading" secondItem="CId-Df-dCq" secondAttribute="leading" id="86u-oc-CWl"/>
+                            <constraint firstItem="CId-Df-dCq" firstAttribute="trailing" secondItem="L4H-6O-bTV" secondAttribute="trailing" id="GJ7-li-LJn"/>
+                            <constraint firstItem="L4H-6O-bTV" firstAttribute="top" secondItem="CId-Df-dCq" secondAttribute="top" id="g4C-14-f9A"/>
+                            <constraint firstItem="CId-Df-dCq" firstAttribute="bottom" secondItem="L4H-6O-bTV" secondAttribute="bottom" id="sxG-xb-PWc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TV" destination="1jc-1Q-kJK" id="OyZ-T5-Ndi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MdS-ss-GIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2145" y="976"/>
+        </scene>
+        <!--Elec View Controller-->
+        <scene sceneID="e2w-vr-lkm">
+            <objects>
+                <viewController storyboardIdentifier="ElecViewController" id="6ib-Vd-AUV" customClass="ElecViewController" customModule="test1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TRq-Ue-c6d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrC-H2-Lhm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="77o-Uh-t63">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="77o-Uh-t63" secondAttribute="trailing" id="MPQ-5J-2sP"/>
+                                    <constraint firstItem="77o-Uh-t63" firstAttribute="top" secondItem="rrC-H2-Lhm" secondAttribute="top" id="TTv-6N-CYI"/>
+                                    <constraint firstItem="77o-Uh-t63" firstAttribute="leading" secondItem="rrC-H2-Lhm" secondAttribute="leading" id="ZAa-F1-KtC"/>
+                                    <constraint firstAttribute="bottom" secondItem="77o-Uh-t63" secondAttribute="bottom" id="l6N-iO-msm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C1u-1x-Gom"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rrC-H2-Lhm" firstAttribute="top" secondItem="C1u-1x-Gom" secondAttribute="top" id="2fX-Ee-4WN"/>
+                            <constraint firstItem="rrC-H2-Lhm" firstAttribute="leading" secondItem="C1u-1x-Gom" secondAttribute="leading" id="CqW-8k-Rcn"/>
+                            <constraint firstItem="C1u-1x-Gom" firstAttribute="bottom" secondItem="rrC-H2-Lhm" secondAttribute="bottom" id="RPz-rR-UNJ"/>
+                            <constraint firstItem="C1u-1x-Gom" firstAttribute="trailing" secondItem="rrC-H2-Lhm" secondAttribute="trailing" id="cHi-FE-b3m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="TA2" destination="77o-Uh-t63" id="Lwb-qc-tgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vFV-2z-p90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2836" y="976"/>
         </scene>
         <!--Home-->
         <scene sceneID="Gzo-iF-pec">
@@ -356,6 +441,7 @@
                         <outlet property="SongImage" destination="kd7-Tk-PKc" id="IIW-NA-r4y"/>
                         <outlet property="SongNameLb" destination="z9D-Yg-3vh" id="ePh-T8-EO9"/>
                         <outlet property="TotalTime" destination="yXU-I9-0jX" id="ZbX-3P-szq"/>
+                        <outlet property="addtoPlaylist" destination="QjC-Ih-gLa" id="AKs-TX-AEL"/>
                         <outlet property="backButton" destination="XPJ-uf-sUT" id="bFn-ez-uS2"/>
                         <outlet property="currentTime" destination="dHp-eE-Ffz" id="xdV-k0-4Ge"/>
                     </connections>
@@ -458,10 +544,10 @@
             </objects>
             <point key="canvasLocation" x="1518" y="-454"/>
         </scene>
-        <!--View Controller-->
+        <!--Song In Play List View Controller-->
         <scene sceneID="vXK-be-n1I">
             <objects>
-                <viewController id="MDk-Tk-N1v" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SongInPlayListViewController" id="MDk-Tk-N1v" customClass="SongInPlayListViewController" customModule="test1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iXx-1h-qb9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -493,6 +579,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8pt-JX-M3x"/>
+                    <connections>
+                        <outlet property="TablePlaylist" destination="eWv-xM-eam" id="G0e-ZI-Nx9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h99-Yw-czw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

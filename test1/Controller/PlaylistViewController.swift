@@ -72,9 +72,11 @@ extension PlaylistViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 92
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.navigationController?.pushViewController(SongInPlayListViewController.makeSelf(), animated: true)
+
+
+    }
 }
 extension PlaylistViewController {
     func showCreatePlaylistAlert() {
@@ -159,4 +161,11 @@ extension PlaylistViewController {
         savePlaylists()
         PlayListTableView.reloadData()
     }
+    func addSongToPlaylist(_ song: Song, atPlaylistIndex index: Int) {
+        playlists[index].songs.append(song)
+        savePlaylists()
+        PlayListTableView.reloadData()
+        showSuccessAlert(message: "Added song to playlist")
+    }
+
 }

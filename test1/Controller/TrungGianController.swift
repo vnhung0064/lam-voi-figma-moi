@@ -14,10 +14,7 @@ class TrungGianController: UIViewController {
     let tabTitles: [String] = ["All genres", "Pop","Electronic","Hip hop","BLUE"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
-        // Do any additional setup after loading the view.
+                // Do any additional setup after loading the view.
         let pageViewController = PageTabMenuViewController(
             
             

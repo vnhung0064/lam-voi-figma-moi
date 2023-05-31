@@ -56,5 +56,48 @@ class APICaller {
         
         task.resume()
     }
+    func getTrackforTag(completion: @escaping (Result<[Song], Error>) -> Void) {
+        guard let url = URL(string: "https://api.jamendo.com/v3.0/tracks/?client_id=f4211734&format=jsonpretty&limit=200&tags=%5Bblues%5D") else { return }
+
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Error: \(String(describing: error))")
+                return
+            }
+
+            do {
+                let json = try JSONDecoder().decode(popularTrackInMonth.self, from: data)
+                completion(.success(json.results))
+                // Handle the response data here
+            } catch {
+                print("Error parsing JSON: \(error)")
+                completion(.failure(error))
+            }
+        }
+
+        task.resume()
+    }
+    func getTrackforTag1(completion: @escaping (Result<[Song], Error>) -> Void) {
+        guard let url = URL(string: "https://api.jamendo.com/v3.0/tracks?client_id=f4211734&format=jsonpretty&limit=200&tags=%25electronic%5D&") else { return }
+
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Error: \(String(describing: error))")
+                return
+            }
+
+            do {
+                let json = try JSONDecoder().decode(popularTrackInMonth.self, from: data)
+                completion(.success(json.results))
+                // Handle the response data here
+            } catch {
+                print("Error parsing JSON: \(error)")
+                completion(.failure(error))
+            }
+        }
+
+        task.resume()
+    }
+
 
 }
