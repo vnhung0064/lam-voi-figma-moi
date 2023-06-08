@@ -11,6 +11,8 @@ class SearchViewController: UIViewController {
     
     var searchResults: [Song] = []
     
+    var song: [Song] = []
+    
     var isSearchResultsVisible = false
 
     
@@ -34,16 +36,16 @@ class SearchViewController: UIViewController {
         
         searchBar.delegate = self
         searchBar.tintColor = .black
+     
         
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemBackground]
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .white
 
 
         self.navigationController?.navigationBar.titleTextAttributes = [
-                            NSAttributedString.Key.foregroundColor: UIColor.white,
+                            NSAttributedString.Key.foregroundColor: UIColor.systemBackground,
                             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)
                         ]
-
     }
 
 }
@@ -68,7 +70,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let song = searchResults[indexPath.row]
-        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song,song1: self.searchResults), animated: true)
+        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song,song1: self.searchResults,playlist: self.song), animated: true)
 
     }
     func search(query: String) {
@@ -91,7 +93,9 @@ extension SearchViewController: UISearchBarDelegate {
         return true
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
         searchBar.resignFirstResponder()
+        
         searchBar.showsCancelButton = false
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

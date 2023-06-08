@@ -33,9 +33,13 @@ class PlaylistViewController: UIViewController {
         
         PlayListTableView.reloadData()
         loadPlaylists()
+        
     }
-   
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadPlaylists()
+        PlayListTableView.reloadData()
+    }
 }
 extension PlaylistViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,6 +66,7 @@ extension PlaylistViewController:UITableViewDelegate, UITableViewDataSource{
             cell.backgroundColor = UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1)
                let playlist = playlists[indexPath.row - 1]
                cell.nameLabel.text = playlist.name
+               cell.songcount.text = "\(playlist.songs.count) songs"
               
                cell.removeButtonTappedClosure = { [weak self] in
                    self?.removePlaylist(atIndex: indexPath.row - 1)}
@@ -73,7 +78,13 @@ extension PlaylistViewController:UITableViewDelegate, UITableViewDataSource{
         return 92
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.pushViewController(SongInPlayListViewController.makeSelf(), animated: true)
+        if indexPath.row == 0 {
+            showCreatePlaylistAlert()
+            
+            
+        }else{
+            self.navigationController?.pushViewController(SongInPlayListViewController.makeSelf(), animated: true)
+        }
 
 
     }
@@ -123,39 +134,27 @@ extension PlaylistViewController {
         present(alert, animated: true, completion: nil)
     }
     func savePlaylists() {
-            let fileManager = FileManager.default
-            guard let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                print("Failed to access document directory")
-                return
-            }
-
-            let playlistsURL = documentsURL.appendingPathComponent("playlists.plist")
-
-            do {
-                let encodedData = try PropertyListEncoder().encode(playlists)
-                try encodedData.write(to: playlistsURL)
-            } catch {
-                print("Failed to save playlists: \(error)")
-            }
+        do {
+            let encodedData = try JSONEncoder().encode(playlists)
+            UserDefaults.standard.set(encodedData, forKey: key_playlists_userdefault)
+        } catch {
+            print("Failed to save playlists: \(error)")
         }
+    }
+
     func loadPlaylists() {
-            let fileManager = FileManager.default
-            guard let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                print("Failed to access document directory")
-                return
-            }
-
-            let playlistsURL = documentsURL.appendingPathComponent("playlists.plist")
-
-            if let encodedData = try? Data(contentsOf: playlistsURL) {
-                do {
-                    let decodedPlaylists = try PropertyListDecoder().decode([Playlist].self, from: encodedData)
-                    playlists = decodedPlaylists
-                } catch {
-                    print("Failed to load playlists: \(error)")
-                }
-            }
+        guard let encodedData = UserDefaults.standard.data(forKey: key_playlists_userdefault) else {
+            print("No saved playlists found")
+            return
         }
+        
+        do {
+            let decodedPlaylists = try JSONDecoder().decode([Playlist].self, from: encodedData)
+            playlists = decodedPlaylists
+        } catch {
+            print("Failed to load playlists: \(error)")
+        }
+    }
     func removePlaylist(atIndex index: Int) {
         playlists.remove(at: index)
         savePlaylists()
@@ -167,5 +166,4 @@ extension PlaylistViewController {
         PlayListTableView.reloadData()
         showSuccessAlert(message: "Added song to playlist")
     }
-
 }

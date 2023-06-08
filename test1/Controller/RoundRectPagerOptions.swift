@@ -25,7 +25,7 @@ struct RoundRectPagerOption: PageMenuOptions {
     }
 
     var menuTitleSelectedColor: UIColor {
-        return .blue
+        return .systemBackground
     }
 
     var menuCursor: PageMenuCursor {
@@ -37,7 +37,7 @@ struct RoundRectPagerOption: PageMenuOptions {
     }
 
     var menuItemMargin: CGFloat {
-        return 8
+        return 10
     }
 
     var tabMenuBackgroundColor: UIColor {

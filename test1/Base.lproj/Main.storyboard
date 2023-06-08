@@ -325,6 +325,49 @@
             </objects>
             <point key="canvasLocation" x="621" y="267"/>
         </scene>
+        <!--Playlistadd Song View Controller-->
+        <scene sceneID="rek-U9-OJK">
+            <objects>
+                <viewController storyboardIdentifier="PlaylistaddSongViewController" id="ImE-dQ-A1j" customClass="PlaylistaddSongViewController" customModule="test1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KBJ-ID-3sC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAl-eN-PI0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lma-yp-s78">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Lma-yp-s78" secondAttribute="trailing" id="U3Q-3w-nrO"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lma-yp-s78" secondAttribute="bottom" id="kbu-Pi-wFL"/>
+                                    <constraint firstItem="Lma-yp-s78" firstAttribute="top" secondItem="MAl-eN-PI0" secondAttribute="top" id="suj-ja-QGZ"/>
+                                    <constraint firstItem="Lma-yp-s78" firstAttribute="leading" secondItem="MAl-eN-PI0" secondAttribute="leading" id="zzc-vE-Bvw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j2g-xB-R7b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j2g-xB-R7b" firstAttribute="trailing" secondItem="MAl-eN-PI0" secondAttribute="trailing" id="UIu-8F-R6w"/>
+                            <constraint firstItem="MAl-eN-PI0" firstAttribute="leading" secondItem="j2g-xB-R7b" secondAttribute="leading" id="Uv3-Dd-KgY"/>
+                            <constraint firstItem="MAl-eN-PI0" firstAttribute="top" secondItem="j2g-xB-R7b" secondAttribute="top" id="WRN-m2-Uck"/>
+                            <constraint firstItem="j2g-xB-R7b" firstAttribute="bottom" secondItem="MAl-eN-PI0" secondAttribute="bottom" id="aVt-jb-qPQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JXo-kw-mQb"/>
+                    <connections>
+                        <outlet property="PlayListTableView" destination="Lma-yp-s78" id="BUK-Nr-aXO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUT-fs-Atf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3571" y="976"/>
+        </scene>
         <!--Track View Controller-->
         <scene sceneID="TPh-Gl-ddn">
             <objects>
@@ -416,6 +459,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="music-playlist"/>
+                                        <connections>
+                                            <action selector="addToPlaylistButtonTapped:" destination="RKy-2c-UZd" eventType="touchUpInside" id="L1R-e7-b8a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -477,7 +523,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2P-rX-h6X">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YMs-M1-GM0">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YMs-M1-GM0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="separatorColor" systemColor="tintColor"/>

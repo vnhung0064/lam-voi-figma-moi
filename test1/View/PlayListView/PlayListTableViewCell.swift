@@ -11,6 +11,7 @@ class PlayListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var RemoveButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var songcount: UILabel!
     static let identifier = "PlayListTableViewCell"
     var removeButtonTappedClosure: (() -> Void)?
 

@@ -29,15 +29,6 @@
                         <nil key="highlightedColor"/>
                         <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1F4-q0-wMk">
-                        <rect key="frame" x="323" y="37" width="16" height="16"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="gray" image="Vector 2"/>
-                        <connections>
-                            <action selector="removeButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kon-Ge-X9W"/>
-                        </connections>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 song" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlY-uj-5ao">
                         <rect key="frame" x="87" y="55" width="248" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -46,18 +37,29 @@
                         <nil key="highlightedColor"/>
                         <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1F4-q0-wMk">
+                        <rect key="frame" x="291" y="21" width="48" height="48"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="gray" image="trash"/>
+                        <connections>
+                            <action selector="removeButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kon-Ge-X9W"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="RemoveButton" destination="1F4-q0-wMk" id="Vr9-cG-0Fx"/>
                 <outlet property="nameLabel" destination="ZZD-r6-fe3" id="dxg-rQ-mC6"/>
+                <outlet property="songcount" destination="NlY-uj-5ao" id="V4C-cb-usk"/>
             </connections>
-            <point key="canvasLocation" x="131" y="-11"/>
+            <point key="canvasLocation" x="129.7709923664122" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Add Icon 1" width="60" height="60"/>
-        <image name="Vector 2" width="14" height="13"/>
+        <image name="trash" width="20" height="20"/>
     </resources>
 </document>

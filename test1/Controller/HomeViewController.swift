@@ -51,7 +51,6 @@ class HomeViewController: UIViewController {
             }
         }
     }
-
 }
 
 extension HomeViewController:UITableViewDelegate, UITableViewDataSource{
@@ -66,11 +65,11 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource{
         cell.configure(with: currentSong)
         
         cell.addButtonTappedClosure = { [weak self] in
-                self?.addToPlaylist(currentSong)
-            }
-
-
-
+              
+               self?.addToPlaylist(currentSong)
+               
+            self?.navigationController?.pushViewController(PlaylistaddSongViewController.makeSelf(currentsong: currentSong), animated: true)
+           }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -80,7 +79,7 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
         let song = song[indexPath.row]
         
-        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song,song1: self.song), animated: true)
+        self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song,song1: self.song,playlist: self.song), animated: true)
        
     }
     

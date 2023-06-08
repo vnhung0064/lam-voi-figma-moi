@@ -14,6 +14,8 @@ class TrackViewController: UIViewController {
 
     var song1: [Song] = []
     
+    var playlist: [Song] = []
+    
     var song: Song?
     
     var player: AVPlayer?
@@ -69,11 +71,13 @@ class TrackViewController: UIViewController {
         navigationItem.title = "Play Song"
     }
     
-    static func makeSelf(song:Song, song1: [Song]) -> TrackViewController {
+    static func makeSelf(song:Song, song1: [Song],playlist: [Song]) -> TrackViewController {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let rootViewController: TrackViewController = storyboard.instantiateViewController(withIdentifier: "TrackViewController") as! TrackViewController
         rootViewController.song = song
         rootViewController.song1 = song1
+        rootViewController.playlist = playlist
+
         return rootViewController
     }
     
@@ -92,7 +96,11 @@ class TrackViewController: UIViewController {
 
         
     }
-    
+    @IBAction func addToPlaylistButtonTapped(_ sender: UIButton) {
+        self.navigationController?.pushViewController(PlaylistaddSongViewController.makeSelf(currentsong: song!), animated: true)
+        
+    }
+
     
     func formatTimeString(_ time: Double) -> String {
         if time.isFinite {
@@ -142,7 +150,6 @@ class TrackViewController: UIViewController {
 
                 }
                 
-
             } else {
                 player?.removeTimeObserver(doituong as Any)
                 RepeateButton.setImage(UIImage(named: "repeateOff"), for: .normal)
