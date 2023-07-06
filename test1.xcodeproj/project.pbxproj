@@ -102,9 +102,9 @@
 				CBC25A182A25DF6500445B74 /* SongInPlayListViewController.swift */,
 				CBC478172A08FF52009C050D /* PageTabMenuViewController.swift */,
 				CBC478192A0901B3009C050D /* RoundRectPagerOptions.swift */,
-				CB91D7B02A0A49C90088225E /* SettingViewController.swift */,
 				CBC4781B2A0907F4009C050D /* TrungGianController.swift */,
 				CBA912F42A14774D00187B8B /* TrackViewController.swift */,
+				CB91D7B02A0A49C90088225E /* SettingViewController.swift */,
 				CBC25A152A25D6B300445B74 /* All Gender */,
 			);
 			path = Controller;
@@ -136,6 +136,7 @@
 		CB91D7A62A09F4940088225E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				CBD06F3B2A308E5400DD8345 /* General.swift */,
 				CB91D7A72A09F4AE0088225E /* APICaller.swift */,
 			);
 			path = Manager;
@@ -171,7 +172,6 @@
 		CB98D61B29DD82DE0051CE98 /* test1 */ = {
 			isa = PBXGroup;
 			children = (
-				CBD06F3B2A308E5400DD8345 /* General.swift */,
 				CB91D7A62A09F4940088225E /* Manager */,
 				CB20EB6A2A038C85001936C7 /* Model */,
 				CB98D61C29DD82DE0051CE98 /* AppDelegate.swift */,
@@ -379,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -433,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

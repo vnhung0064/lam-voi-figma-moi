@@ -17,27 +17,27 @@ struct RoundRectPagerOption: PageMenuOptions {
     var tabMenuPosition: TabMenuPosition = .top
 
     var menuItemSize: PageMenuItemSize {
-        return .sizeToFit(minWidth: 80, height: 30)
+        return .sizeToFit(minWidth: 80, height: 40)
     }
 
     var menuTitleColor: UIColor {
-        return .systemBackground
+        return .white
     }
 
     var menuTitleSelectedColor: UIColor {
-        return .systemBackground
+        return UIColor(red: 3/255, green: 125/255, blue: 233/255, alpha: 1)
     }
 
     var menuCursor: PageMenuCursor {
-        return .roundRect(rectColor: .white, cornerRadius: 16, height: 32, borderWidth: nil, borderColor: nil)
+        return .roundRect(rectColor:.white, cornerRadius: 16, height: 32, borderWidth: nil, borderColor: nil)
     }
-
+    
     var font: UIFont {
         return UIFont.systemFont(ofSize: UIFont.systemFontSize)
     }
 
     var menuItemMargin: CGFloat {
-        return 10
+        return 16
     }
 
     var tabMenuBackgroundColor: UIColor {

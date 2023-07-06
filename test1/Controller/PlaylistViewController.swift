@@ -33,7 +33,6 @@ class PlaylistViewController: UIViewController {
         
         PlayListTableView.reloadData()
         loadPlaylists()
-        
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -67,9 +66,30 @@ extension PlaylistViewController:UITableViewDelegate, UITableViewDataSource{
                let playlist = playlists[indexPath.row - 1]
                cell.nameLabel.text = playlist.name
                cell.songcount.text = "\(playlist.songs.count) songs"
-              
+               
+               if let lastSong = playlist.songs.last {
+                   cell.setLastSongAlbumImage(lastSong.album_image)
+                      }
+               
                cell.removeButtonTappedClosure = { [weak self] in
-                   self?.removePlaylist(atIndex: indexPath.row - 1)}
+                           let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+                           
+                           let renameAction = UIAlertAction(title: "Rename", style: .default) { action in
+                               self?.showRenamePlaylistAlert(atIndex: indexPath.row - 1)
+                           }
+                           
+                           let removeAction = UIAlertAction(title: "Remove", style: .destructive) { action in
+                               self?.removePlaylist(atIndex: indexPath.row - 1)
+                           }
+                           
+                           let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                           
+                           alertController.addAction(renameAction)
+                           alertController.addAction(removeAction)
+                           alertController.addAction(cancelAction)
+                           
+                           self?.present(alertController, animated: true, completion: nil)
+                       }
             return cell
             
         }
@@ -81,11 +101,9 @@ extension PlaylistViewController:UITableViewDelegate, UITableViewDataSource{
         if indexPath.row == 0 {
             showCreatePlaylistAlert()
             
-            
         }else{
-            self.navigationController?.pushViewController(SongInPlayListViewController.makeSelf(), animated: true)
+            self.navigationController?.pushViewController(SongInPlayListViewController.makeSelf(index: indexPath.row - 1), animated: true)
         }
-
 
     }
 }
@@ -122,8 +140,7 @@ extension PlaylistViewController {
     
     func showSuccessAlert(message: String) {
         let alert = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default
-                                     , handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
@@ -166,4 +183,34 @@ extension PlaylistViewController {
         PlayListTableView.reloadData()
         showSuccessAlert(message: "Added song to playlist")
     }
+    func showRenamePlaylistAlert(atIndex index: Int) {
+        let alert = UIAlertController(title: "Rename Playlist", message: "Enter new playlist name", preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "Name"
+        }
+        
+        let renameAction = UIAlertAction(title: "Rename", style: .default) { [weak self] _ in
+            guard let nameTextField = alert.textFields?.first, let name = nameTextField.text, !name.isEmpty else {
+                self?.showErrorAlert(message: "Please enter new playlist name")
+                return
+            }
+            self?.renamePlaylist(atIndex: index, withName: name)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alert.addAction(renameAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+
+    func renamePlaylist(atIndex index: Int, withName name: String) {
+        playlists[index].name = name
+        savePlaylists()
+        PlayListTableView.reloadData()
+        showSuccessAlert(message: "Đã đổi tên danh sách phát thành công: \(name)")
+    }
+    
+
 }

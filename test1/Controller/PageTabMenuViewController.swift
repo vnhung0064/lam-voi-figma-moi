@@ -11,7 +11,6 @@ import SwiftPageMenu
 
 class PageTabMenuViewController: PageMenuController {
 
-    
 
     let titles: [String]
 
@@ -28,9 +27,6 @@ class PageTabMenuViewController: PageMenuController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-
-        
-        
         self.edgesForExtendedLayout = []
         
         let appearance = UINavigationBarAppearance()

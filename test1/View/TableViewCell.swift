@@ -23,6 +23,11 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        SongName.textColor = UIColor(named: "Color")
+        SingerName.textColor = UIColor(named: "Color")
+        
+        avImage.layer.cornerRadius = 4
+
     }
     
     func configuare(with image:UIImage){

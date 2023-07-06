@@ -24,8 +24,10 @@ class HomeViewController: UIViewController {
         HomeTable.register(TableViewCell.nib(), forCellReuseIdentifier:TableViewCell.identifier)
         HomeTable.delegate = self
         HomeTable.dataSource = self
-       
         fetchData()
+        
+        
+        
     }
     func addToPlaylist(_ song: Song) {
             playlistSongs.append(song)
@@ -79,11 +81,10 @@ extension HomeViewController:UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
         let song = song[indexPath.row]
         
+      
         self.navigationController?.pushViewController(TrackViewController.makeSelf(song: song,song1: self.song,playlist: self.song), animated: true)
-       
+            
+        
     }
     
-    
 }
-
-

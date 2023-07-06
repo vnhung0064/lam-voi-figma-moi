@@ -9,7 +9,10 @@ import UIKit
 import AVFoundation
 import SDWebImage
 
+var TrackPlayCurrent : TrackViewController?
+
 class TrackViewController: UIViewController {
+    
     var currentTrackIndex = 0
 
     var song1: [Song] = []
@@ -24,6 +27,7 @@ class TrackViewController: UIViewController {
 
     var isRepeating = false
 
+   // var miniTrackVC: MiniTrackViewController?
     
     @IBOutlet weak var SongImage: UIImageView!
     
@@ -44,6 +48,7 @@ class TrackViewController: UIViewController {
     @IBOutlet weak var NextButton: UIButton!
     
     @IBOutlet weak var addtoPlaylist: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SongNameLb.text = song?.name
@@ -69,7 +74,14 @@ class TrackViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "add-circle"), style: .done, target: self, action: nil)
         
         navigationItem.title = "Play Song"
-    }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(checkSongEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+
+        TrackPlayCurrent = self
+
+}
+    
+    
     
     static func makeSelf(song:Song, song1: [Song],playlist: [Song]) -> TrackViewController {
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -80,6 +92,7 @@ class TrackViewController: UIViewController {
 
         return rootViewController
     }
+    
     
     @IBAction func PlayClicked(_ sender: UIButton) {
         switch player?.timeControlStatus {
@@ -130,7 +143,6 @@ class TrackViewController: UIViewController {
             let progress = Float(currentTimeSeconds / durationSeconds)
             self.Slider.value = progress
             
-            self.checkSongEnd()
 
         }
     }
@@ -164,8 +176,6 @@ class TrackViewController: UIViewController {
             if currentTrackIndex >= song1.count {
                 currentTrackIndex = 0
             }
-            print(song1)
-
             let nextSong = song1[currentTrackIndex]
             
             // Thực hiện các thay đổi cần thiết để chuyển đến bài hát tiếp theo, ví dụ: cập nhật UI, thay đổi URL audio, vv.
@@ -180,6 +190,7 @@ class TrackViewController: UIViewController {
             let playerItem = AVPlayerItem(url: urlaudio!)
             player?.replaceCurrentItem(with: playerItem)
             player?.play()
+            
         }
     }
 
@@ -242,21 +253,10 @@ class TrackViewController: UIViewController {
     }
     
     @objc func checkSongEnd() {
-        guard let player = player else { return }
-        
-        if player.currentItem?.status == .readyToPlay {
-            let currentTime = CMTimeGetSeconds(player.currentTime())
-            let duration = CMTimeGetSeconds(player.currentItem?.duration ?? CMTime.zero)
-            
-            if currentTime >= duration {
-                timer?.invalidate()
-                timer = nil
-                
-                playNextTrack()
-            }
-        }
+        player!.seek(to: CMTime.zero)
+        player!.pause()
+        playNextTrack()
     }
-
+    
    
 }
-

@@ -17,4 +17,6 @@ struct Song:Codable {
     var name: String
     var artist_name: String
     var album_image: String
+    
+
 }

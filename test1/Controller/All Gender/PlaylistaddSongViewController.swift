@@ -90,6 +90,10 @@ extension PlaylistaddSongViewController:UITableViewDelegate, UITableViewDataSour
         let playlist = playlists[indexPath.row]
         cell!.nameLabel.text = playlist.name
         cell!.songcount.text = "\(playlist.songs.count) songs"
+        
+        if let lastSong = playlist.songs.last {
+            cell!.setLastSongAlbumImage(lastSong.album_image)
+               }
         return cell!
         
     }

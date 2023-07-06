@@ -45,7 +45,7 @@ extension SettingViewController:UITableViewDelegate, UITableViewDataSource{
        
         cell.textLabel?.textColor = .white
         
-        
+
 
         return cell
     }
