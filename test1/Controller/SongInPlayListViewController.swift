@@ -24,6 +24,7 @@ class SongInPlayListViewController: UIViewController {
         TablePlaylist.delegate = self
         fetchdatafromUserdefault()
         TablePlaylist.backgroundColor = UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1)
+        view.backgroundColor = UIColor(red: 0.208, green: 0.2, blue: 0.361, alpha: 1)
     
         button = UIButton()
         button.addTarget(self, action: #selector(selectButtonTapped), for: .touchUpInside)

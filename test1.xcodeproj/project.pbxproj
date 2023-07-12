@@ -38,6 +38,7 @@
 		CBC478182A08FF52009C050D /* PageTabMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC478172A08FF52009C050D /* PageTabMenuViewController.swift */; };
 		CBC4781A2A0901B3009C050D /* RoundRectPagerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC478192A0901B3009C050D /* RoundRectPagerOptions.swift */; };
 		CBC4781C2A0907F4009C050D /* TrungGianController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC4781B2A0907F4009C050D /* TrungGianController.swift */; };
+		CBCAA1DB2A5CFE4700214C5D /* MiniTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCAA1DA2A5CFE4700214C5D /* MiniTrack.swift */; };
 		CBD06F3C2A308E5400DD8345 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD06F3B2A308E5400DD8345 /* General.swift */; };
 		CBFD85CB2A0B97B200FB459F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CBFD85CA2A0B97B200FB459F /* SDWebImage */; };
 		CBFD85CD2A0B97B200FB459F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CBFD85CC2A0B97B200FB459F /* SDWebImageMapKit */; };
@@ -76,6 +77,7 @@
 		CBC478172A08FF52009C050D /* PageTabMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTabMenuViewController.swift; sourceTree = "<group>"; };
 		CBC478192A0901B3009C050D /* RoundRectPagerOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundRectPagerOptions.swift; sourceTree = "<group>"; };
 		CBC4781B2A0907F4009C050D /* TrungGianController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrungGianController.swift; sourceTree = "<group>"; };
+		CBCAA1DA2A5CFE4700214C5D /* MiniTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniTrack.swift; sourceTree = "<group>"; };
 		CBD06F3B2A308E5400DD8345 /* General.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +124,7 @@
 		CB20EB6D2A038FB2001936C7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBB39A642A5BBD3D001FA332 /* MiniTrack */,
 				CB9384AD2A11E32F0079B7FA /* PlayListView */,
 				CB20EB6E2A038FED001936C7 /* TableViewCell.swift */,
 				CB20EB6F2A038FED001936C7 /* TableViewCell.xib */,
@@ -184,6 +187,14 @@
 				CB98D62A29DD82E00051CE98 /* Info.plist */,
 			);
 			path = test1;
+			sourceTree = "<group>";
+		};
+		CBB39A642A5BBD3D001FA332 /* MiniTrack */ = {
+			isa = PBXGroup;
+			children = (
+				CBCAA1DA2A5CFE4700214C5D /* MiniTrack.swift */,
+			);
+			path = MiniTrack;
 			sourceTree = "<group>";
 		};
 		CBC25A152A25D6B300445B74 /* All Gender */ = {
@@ -293,6 +304,7 @@
 				CBD06F3C2A308E5400DD8345 /* General.swift in Sources */,
 				CBB548F929FB80B1006A958E /* SearchViewController.swift in Sources */,
 				CB20EB6C2A038FA0001936C7 /* Song.swift in Sources */,
+				CBCAA1DB2A5CFE4700214C5D /* MiniTrack.swift in Sources */,
 				CB91D7AE2A0A49A00088225E /* SettingTableViewCell.swift in Sources */,
 				CBA912F52A14774E00187B8B /* TrackViewController.swift in Sources */,
 				CB20EB702A038FED001936C7 /* TableViewCell.swift in Sources */,

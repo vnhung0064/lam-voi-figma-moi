@@ -54,9 +54,20 @@ class TrackViewController: UIViewController {
         SongNameLb.text = song?.name
         SinggerNameLb.text = song?.artist_name
         SinggerNameLb.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.5)
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
+            print("Playback OK")
+            try AVAudioSession.sharedInstance().setActive(true)
+            print("Session is Active")
+        } catch {
+            print(error)
+        }
+        
         if let imageURL = URL(string: song!.album_image) {
             SongImage.sd_setImage(with: imageURL, completed: nil)
         }
+        
         if let iden = song?.id {
             let urlaudio = URL(string: "https://mp3l.jamendo.com/?trackid=\(iden)&format=mp31&from=app-devsite")
             print(urlaudio!)

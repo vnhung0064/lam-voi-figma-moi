@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MdS-ss-GIV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="976"/>
+            <point key="canvasLocation" x="2741" y="317"/>
         </scene>
         <!--Elec View Controller-->
         <scene sceneID="e2w-vr-lkm">
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFV-2z-p90" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2836" y="976"/>
+            <point key="canvasLocation" x="3430" y="317"/>
         </scene>
         <!--Home-->
         <scene sceneID="Gzo-iF-pec">
@@ -144,6 +144,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KQv-MP-2fi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Vlo-bS-dnh" kind="relationship" relationship="rootViewController" id="3Lq-lY-nmJ"/>
@@ -167,7 +168,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H2c-DG-DNq">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="separatorColor" red="1" green="1" blue="1" alpha="0.39701469370860926" colorSpace="calibratedRGB"/>
+                                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -267,7 +268,7 @@
                             <constraint firstItem="CDA-nV-w7L" firstAttribute="bottom" secondItem="4Kw-tr-ORX" secondAttribute="bottom" id="zXl-Nc-Yac"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="never" style="editor" id="ViO-Cx-EPD"/>
+                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="never" style="browser" id="ViO-Cx-EPD"/>
                     <connections>
                         <outlet property="discoverTable" destination="1PL-km-xW3" id="WPl-8Z-w4U"/>
                         <outlet property="image" destination="l1k-FQ-QJK" id="8kn-ql-abV"/>
@@ -322,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Phn-Ka-K5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="619" y="337"/>
+            <point key="canvasLocation" x="716" y="346"/>
         </scene>
         <!--Playlistadd Song View Controller-->
         <scene sceneID="rek-U9-OJK">
@@ -365,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUT-fs-Atf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3571" y="976"/>
+            <point key="canvasLocation" x="4165" y="317"/>
         </scene>
         <!--Track View Controller-->
         <scene sceneID="TPh-Gl-ddn">
@@ -444,22 +445,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmF-Ty-e1A">
-                                        <rect key="frame" x="64" y="590" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="repeateOff"/>
-                                        <connections>
-                                            <action selector="RepeateTapped:" destination="RKy-2c-UZd" eventType="touchUpInside" id="ozB-mi-lRs"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjC-Ih-gLa">
-                                        <rect key="frame" x="308" y="570" width="48" height="44"/>
+                                        <rect key="frame" x="302" y="564" width="48" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="music-playlist"/>
                                         <connections>
                                             <action selector="addToPlaylistButtonTapped:" destination="RKy-2c-UZd" eventType="touchUpInside" id="L1R-e7-b8a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmF-Ty-e1A">
+                                        <rect key="frame" x="64" y="566" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="repeateOff"/>
+                                        <connections>
+                                            <action selector="RepeateTapped:" destination="RKy-2c-UZd" eventType="touchUpInside" id="ozB-mi-lRs"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -493,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07Y-lG-XMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762.31884057971024" y="1014.5089285714286"/>
+            <point key="canvasLocation" x="-943" y="938"/>
         </scene>
         <!--Home-->
         <scene sceneID="cUa-7i-2mO">
@@ -553,7 +554,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wfk-db-nye" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1517" y="281"/>
+            <point key="canvasLocation" x="1377" y="346"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="dt3-Ss-dal">

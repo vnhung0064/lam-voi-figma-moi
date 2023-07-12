@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class PlaylistaddSongViewController: UIViewController {
     
     @IBOutlet weak var PlayListTableView: UITableView!
@@ -94,6 +94,10 @@ extension PlaylistaddSongViewController:UITableViewDelegate, UITableViewDataSour
         if let lastSong = playlist.songs.last {
             cell!.setLastSongAlbumImage(lastSong.album_image)
                }
+        else {
+            cell?.PlaylistImage.image = UIImage(named: "Add Icon 1")
+
+        }
         return cell!
         
     }
